@@ -7,8 +7,15 @@ var Queue = function() {
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
+    var lgestNum = 0;
     // look for largest num key
+    for (var key in storage) {
+      if (key > lgestNum) {
+        lgestNum = key;
+      }
+    }
     // create key (num + 1) = value
+    storage[lgestNum + 1] = value;
   };
 
   someInstance.dequeue = function() {
