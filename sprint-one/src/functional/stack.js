@@ -6,17 +6,20 @@ var Stack = function() {
 
   // Implement the methods below
   someInstance.push = function(value) {
-    // Check for key w/ largest number
-    // Create key (one more than largest number) = value
+    // Create key (storage size) = value
   };
 
   someInstance.pop = function() {
-    // Check for key w/ largest num
-    // Rm key from storage.
+    // Rm key (storage size - 1) from storage.
   };
 
   someInstance.size = function() {
+    var count = 0;
     // For each key in storage add to count
+    for (var key in storage) {
+      count++;
+    }
+    return count;
   };
 
   return someInstance;
