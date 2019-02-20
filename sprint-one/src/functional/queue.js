@@ -19,8 +19,15 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
+    var smestNum;
     // look for smallest num key
+    for (var key in storage) {
+      if (smestNum === undefined || smestNum > key) {
+        smestNum = key;
+      }
+    }
     // rm key
+    delete storage[smallest];
   };
 
   someInstance.size = function() {
