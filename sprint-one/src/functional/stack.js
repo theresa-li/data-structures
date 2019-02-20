@@ -7,10 +7,14 @@ var Stack = function() {
   // Implement the methods below
   someInstance.push = function(value) {
     // Create key (storage size) = value
+    storage[someInstance.size()] = value;
   };
 
   someInstance.pop = function() {
     // Rm key (storage size - 1) from storage.
+    var popped = storage[someInstance.size() - 1];
+    delete storage[someInstance.size() - 1];
+    return popped;
   };
 
   someInstance.size = function() {
