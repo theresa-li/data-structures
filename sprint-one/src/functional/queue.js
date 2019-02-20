@@ -12,7 +12,8 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    // remove first item in key
+    // look for smallest num key
+    // rm key
   };
 
   someInstance.size = function() {
