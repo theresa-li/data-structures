@@ -27,7 +27,9 @@ var Queue = function() {
       }
     }
     // rm key
-    delete storage[smallest];
+    var dequeued = storage[smestNum];
+    delete storage[smestNum];
+    return dequeued;
   };
 
   someInstance.size = function() {
