@@ -12,14 +12,23 @@ var stackMethods = {};
 
 stackMethods.push = function(string) {
   // Add key (size) = string
-}
+  this.storage[this.size()] = string;
+};
 
 stackMethods.pop = function() {
   // Store key (size - 1)
+  var popped = this.storage[this.size() - 1];
   // Rm key
+  delete this.storage[this.size() - 1];
   // Return key
-}
+  return popped;
+};
 
 stackMethods.size = function() {
+  var count = 0;
   // For each key in storage, add to count
-}
+  for (var key in this.storage) {
+    count++;
+  }
+  return count;
+};
