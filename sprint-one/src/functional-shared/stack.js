@@ -18,8 +18,11 @@ stackMethods.push = function(string) {
 
 stackMethods.pop = function() {
   // store val of key (size - 1)
+  var popped = this.storage[this.size() - 1];
   // rm val
+  delete this.storage[this.size() - 1];
   // return val
+  return popped;
 };
 
 stackMethods.size = function() {
@@ -30,9 +33,3 @@ stackMethods.size = function() {
   }
   return count;
 };
-
-// Implement a stack with the following methods:
-
-// push(string) - Add a string to the top of the stack
-// pop() - Remove and return the string on the top of the stack
-// size() - Return the number of items on the stack
