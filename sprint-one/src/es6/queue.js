@@ -17,10 +17,10 @@ class Queue {
     this.storage[lgestNum + 1] = string;
   }
 
-  dequeued() {
+  dequeue() {
     var smestNum;
     // Find key with smallest number
-    for (var key in this.object) {
+    for (var key in this.storage) {
       if (smestNum === undefined || smestNum > key){
         smestNum = key;
       }
